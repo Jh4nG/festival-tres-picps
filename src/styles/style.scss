@@ -1,0 +1,20 @@
+@use "./variables" as *;
+
+body {
+    @include breakPoint($xxxxlarge) {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+#root {
+    max-width: 1920px;
+    background-color: rgba($secondary_light, 0.2);
+    @include breakPoint($xxxxlarge) {
+        min-width: 1920px;
+    }
+}
+
+.pointer {
+    cursor: pointer;
+}

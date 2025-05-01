@@ -1,0 +1,33 @@
+/*######### BREAKPOINT ########*/
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+$xlarge: 1200px;
+$xxlarge: 1400px;
+$xxxlarge: 1600px;
+$xxxxlarge: 1980px;
+
+$primary_color: #4f62ef;
+$primary_light: #9fa9f8;
+$primary_light_medium: #7982f3;
+$primary_dark: #0f27dc;
+$primary_dark_medium: #2b41e8;
+
+$secondary_color: #8548ef;
+$secondary_light: #bd9bf7;
+$secondary_light_medium: #9e6df3;
+$secondary_dark: #570bdb;
+$secondary_dark_medium: #6b23e8;
+
+$tertiary_color: #3fb4ec;
+$tertiary_light: #95d7f6;
+$tertiary_light_medium: #66c4f1;
+$tertiary_dark: #0592d6;
+$tertiary_dark_medium: #18a2e4;
+
+// MIXIN
+@mixin breakPoint($size) {
+    @media (min-width: $size) {
+        @content;
+    }
+}

@@ -1,0 +1,75 @@
+@use "./../variables" as *;
+
+.header {
+    top: 0;
+    position: sticky;
+    width: 100%;
+    background: linear-gradient(to bottom, $tertiary_color, black);
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0px 0.1px 5px black;
+
+    @include breakPoint($large) {
+        display: flex;
+        height: 80px;
+    }
+
+    &__img {
+        img {
+            width: 60%;
+            @include breakPoint($small) {
+                width: 40%;
+            }
+            @include breakPoint($medium) {
+                width: 30%;
+            }
+            @include breakPoint($large) {
+                width: 20%;
+            }
+            @include breakPoint($xlarge) {
+                width: 25%;
+            }
+        }
+    }
+
+    &__list {
+        position: absolute;
+        height: 100vh;
+        background: linear-gradient(to bottom, $tertiary_color, black);
+        @include breakPoint($medium) {
+            position: relative;
+            height: auto;
+            background: transparent;
+        }
+
+        &__link {
+            cursor: pointer;
+            color: white;
+            text-decoration: none;
+            font-weight: 400;
+            line-height: normal;
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 0.8rem;
+            border-bottom: 1px solid gray;
+            transition: font-size 0.3s ease;
+            border-bottom: none;
+            @include breakPoint($xxxlarge) {
+                font-size: 1.1rem;
+            }
+
+            &:hover {
+                @include breakPoint($medium) {
+                    font-size: 1rem;
+                    border-bottom: none;
+                }
+                @include breakPoint($large) {
+                    font-size: 1rem;
+                }
+                @include breakPoint($xxxlarge) {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
