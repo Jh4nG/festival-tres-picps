@@ -10,12 +10,18 @@ export const Header = () => {
     const navigate = useNavigate();
 
     const renderListItem = (header) => {
+        const path = window.location.pathname;
         return (
             <div
-                className="my-2 header__list__link"
+                className={`my-2 header__list__link ${
+                    path == `/${header.redirect}` && "active"
+                }`}
                 key={header.id}
                 onClick={() => {
-                    scrollToElement(header.redirect);
+                    if (path === `/${header.redirect}`) {
+                        return;
+                    }
+                    navigate(`/${header.redirect}`);
                 }}
             >
                 {header.name}
@@ -29,15 +35,15 @@ export const Header = () => {
 
     return (
         <div id="header" className="header">
-            <div className="row col-md-12 mx-0">
-                <div className="header__img text-center col-6 col-md-5 py-2 py-lg-3">
+            <div className="d-flex justify-content-between mx-0">
+                <div className="header__img col-4">
                     <img
                         className="my-lg-2 mx-4 pointer"
                         src={HeaderJson.img}
                         onClick={navigate("/")}
                     />
                 </div>
-                <div className="d-none d-md-flex header__list col-md-6 col-lg-5 justify-content-between align-self-center">
+                <div className="d-none d-md-flex header__list col-8 col-md-8 col-lg-7 col-xl-5 justify-content-between align-self-center">
                     {HeaderJson.headers.map((header) => renderListItem(header))}
                 </div>
 

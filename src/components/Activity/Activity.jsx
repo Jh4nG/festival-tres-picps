@@ -9,16 +9,7 @@ export const Activity = () => {
     };
 
     return (
-        <div
-            className="activity mb-2 mb-md-5"
-            data-aos="fade-up"
-            data-aos-offset="200"
-            data-aos-delay="50"
-            data-aos-duration="60"
-            data-aos-mirror="true"
-            data-aos-once="false"
-            data-aos-anchor-placement="top-center"
-        >
+        <div>
             <div className="activity__container">
                 <div className="activity__content py-1">
                     <BlurText

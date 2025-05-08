@@ -8,7 +8,7 @@ export const BannerHome = () => {
         console.log(redirect);
     };
     return (
-        <div className="banner" data-aos="fade-in">
+        <div className="banner">
             <div className="banner__container">
                 <Carousel
                     data-bs-theme="light"

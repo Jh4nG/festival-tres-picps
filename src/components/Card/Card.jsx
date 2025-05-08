@@ -7,7 +7,7 @@ export const Card = () => {
         console.log(redirect);
     };
     return (
-        <div className="card__container mt-5 my-mb-5" data-aos="fade-up">
+        <div className="card__container mt-5 my-mb-5 mb-5">
             <div className="row">
                 {CardJSON.map((c) => (
                     <div
@@ -23,9 +23,6 @@ export const Card = () => {
                             </p>
                             <p className="card-title">{c.title}</p>
                             <p className="small-desc">{c.description}</p>
-                            <div className="go-corner">
-                                <div className="go-arrow">→</div>
-                            </div>
                         </div>
                     </div>
                 ))}

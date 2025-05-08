@@ -9,8 +9,11 @@
 
         img {
             width: 100%;
-            min-height: 200px;
-            max-height: 550px;
+            min-height: 250px;
+            max-height: 500px;
+            @include breakPoint($xxxlarge) {
+                max-height: 700px;
+            }
         }
     }
 }

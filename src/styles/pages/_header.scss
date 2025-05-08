@@ -4,11 +4,10 @@
     top: 0;
     position: sticky;
     width: 100%;
-    background: linear-gradient(to bottom, $tertiary_color, black);
+    background: $primary_color;
     align-items: center;
     z-index: 100;
     box-shadow: 0px 0.1px 5px black;
-
     @include breakPoint($large) {
         display: flex;
         height: 80px;
@@ -16,26 +15,27 @@
 
     &__img {
         img {
-            width: 60%;
+            filter: invert(1) drop-shadow(2px 4px 6px black);
+            width: 90%;
             @include breakPoint($small) {
-                width: 40%;
+                width: 70%;
             }
             @include breakPoint($medium) {
-                width: 30%;
+                width: 50%;
             }
             @include breakPoint($large) {
-                width: 20%;
+                width: 30%;
             }
             @include breakPoint($xlarge) {
-                width: 25%;
+                width: 20%;
             }
         }
     }
 
     &__list {
         position: absolute;
-        height: 100vh;
-        background: linear-gradient(to bottom, $tertiary_color, black);
+        height: 110vh;
+        background: $primary_color;
         @include breakPoint($medium) {
             position: relative;
             height: auto;
@@ -54,8 +54,23 @@
             border-bottom: 1px solid gray;
             transition: font-size 0.3s ease;
             border-bottom: none;
+            filter: drop-shadow(2px 4px 6px black);
             @include breakPoint($xxxlarge) {
                 font-size: 1.1rem;
+            }
+
+            &.active {
+                font-weight: bold;
+                @include breakPoint($medium) {
+                    font-size: 1rem;
+                    border-bottom: none;
+                }
+                @include breakPoint($large) {
+                    font-size: 1rem;
+                }
+                @include breakPoint($xxxlarge) {
+                    font-size: 1.2rem;
+                }
             }
 
             &:hover {

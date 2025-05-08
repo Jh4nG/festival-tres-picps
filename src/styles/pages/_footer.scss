@@ -4,7 +4,7 @@
     width: 100%;
     color: white;
     justify-content: center;
-    background: linear-gradient(to bottom, $secondary_dark, black);
+    background: $primary_color;
     &__container {
         padding-right: calc(var(--bs-gutter-x) * 0.5);
         padding-left: calc(var(--bs-gutter-x) * 0.5);
@@ -17,6 +17,7 @@
         h1 {
             font-size: 2rem;
             font-weight: bold;
+            filter: drop-shadow(1px 1px 1px black);
             @include breakPoint($medium) {
                 font-size: 2.3rem;
             }
@@ -29,8 +30,9 @@
         }
         a {
             font-size: 0.8rem;
-            color: white;
+            color: $secondary_light;
             text-decoration: none;
+            filter: drop-shadow(0px 0px 10px black);
             @include breakPoint($medium) {
                 font-size: 0.9rem;
             }
@@ -41,40 +43,71 @@
     }
 
     &__secciones {
-        font-size: 0.8rem;
-        transition: font-size 0.3s ease;
-        background: linear-gradient(
-            to bottom,
-            white,
-            white 55%,
-            $secondary_color
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        color: transparent;
+        h4 {
+            filter: drop-shadow(1px 1px 1px black);
+        }
+        &__div {
+            font-size: 0.8rem;
+            transition: font-size 0.3s ease;
+            color: $secondary_light;
+            filter: drop-shadow(0px 0px 10px black);
 
-        &:hover {
-            font-size: 1.1rem;
-        }
+            &:hover {
+                font-size: 1.1rem;
+            }
 
-        @include breakPoint($medium) {
-            font-size: 0.9rem;
+            @include breakPoint($medium) {
+                font-size: 0.9rem;
+            }
+            @include breakPoint($large) {
+                font-size: 1rem;
+            }
         }
-        @include breakPoint($large) {
-            font-size: 1rem;
-        }
+    }
+
+    &__organizaciones__title {
+        filter: drop-shadow(1px 1px 1px black);
     }
 
     &__logos {
         img {
-            width: 70%;
+            width: 100px;
+            filter: drop-shadow(1px 1px 1px black);
+            @include breakPoint($medium) {
+                width: 75px;
+            }
+            @include breakPoint($large) {
+                width: 120%;
+            }
+        }
+        &-localidad {
+            width: 100px;
+            padding-left: 1.5rem;
+            filter: drop-shadow(1px 1px 1px black);
+            @include breakPoint($medium) {
+                width: 75px !important;
+            }
+            @include breakPoint($large) {
+                width: 80% !important;
+            }
+        }
+
+        &-festival {
+            filter: invert(1) drop-shadow(2px 4px 6px black) !important;
+        }
+
+        &-alcaldia {
+            width: 200px;
+            filter: drop-shadow(1px 1px 1px black);
+            @include breakPoint($large) {
+                width: 60% !important;
+            }
         }
     }
 
     &__copy {
         font-size: 0.6rem;
         color: white;
-        border-top: 1px solid $primary_light;
         background-color: black;
         @include breakPoint($small) {
             font-size: 0.7rem;
@@ -84,6 +117,72 @@
         }
         @include breakPoint($large) {
             font-size: 1rem;
+        }
+    }
+
+    &__redes {
+        &_faico {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            filter: drop-shadow(1px 1px 1px black);
+        }
+        &_faico li {
+            display: inline-block;
+            margin: 8px 5px 0 0;
+            padding: 0;
+            line-height: normal;
+        }
+        &_faico li:last-child {
+            margin-right: 0;
+        }
+        &_faico a {
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            line-height: 35px;
+            font-size: 18px;
+            text-align: center;
+            border-radius: 50%;
+            background-clip: padding-box;
+        }
+        &_faico a {
+            color: #000000;
+            background-color: #ffffff;
+            transition: all 0.3s ease-in-out;
+        }
+        &_faico a:hover {
+            color: #ffffff;
+        }
+        &_faicon-instagram:hover {
+            background-color: #ea4c89;
+        }
+        &_faicon-facebook:hover {
+            background-color: #3b5998;
+        }
+        &_faicon-google-plus:hover {
+            background-color: #db4a39;
+        }
+        &_faicon-linkedin:hover {
+            background-color: #0e76a8;
+        }
+        &_faicon-twitter:hover {
+            background-color: #00acee;
+        }
+        &_faicon-youtube:hover {
+            background-color: red;
+        }
+        &_faicon-vk:hover {
+            background-color: #4e658e;
+        }
+        &_faicon-whatsapp:hover {
+            background-color: #25d366;
+        }
+        &_faicon-email:hover {
+            background-color: black;
+        }
+        &_faicon-tiktok:hover {
+            background-color: black;
         }
     }
 }

@@ -141,25 +141,17 @@ More comprehensive version at shenanigans.shoghisimon.ca/collection/css-rain-bg/
             img {
                 width: 150px;
                 border-radius: 100rem;
-                border: 3px solid $tertiary_light_medium;
+                border: 3px solid $secondary_light_medium;
             }
 
             &__title {
                 text-align: center;
                 align-items: center;
+                filter: drop-shadow(1px 1px 1px black);
                 span {
                     font-size: 2rem !important;
                     font-weight: bold;
-                    background: linear-gradient(
-                        to bottom,
-                        $tertiary_color,
-                        $tertiary_color 40%,
-                        black
-                    );
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                    color: transparent;
-
+                    color: gray;
                     @include breakPoint($medium) {
                         font-size: 3rem !important;
                     }
@@ -169,42 +161,34 @@ More comprehensive version at shenanigans.shoghisimon.ca/collection/css-rain-bg/
                 }
             }
 
-            h3 {
-                color: black;
+            h3,
+            p {
+                color: white;
+                transform: scale(1);
+                transform-origin: 50% 50%;
+                transition: transform 0.35s ease-out;
+                filter: drop-shadow(0px 0px 10px black);
             }
 
-            p {
-                color: black;
+            &:hover {
+                transform: scale(38);
             }
 
             .embla__slide:hover {
                 &__title,
                 p {
                     font-weight: bold;
+                    transition: all 0.5s ease-out;
                 }
                 img,
                 h3 {
-                    background: linear-gradient(
-                        to bottom,
-                        $tertiary_color,
-                        $tertiary_color 40%,
-                        black
-                    );
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                    color: transparent;
-                    border-color: $tertiary_color;
+                    color: $secondary_dark;
+                    border-color: $secondary_dark;
+                    transition: all 0.5s ease-out;
                 }
                 p {
-                    background: linear-gradient(
-                        to bottom,
-                        $tertiary_color,
-                        $tertiary_color 40%,
-                        black
-                    );
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                    color: transparent;
+                    color: $secondary_dark;
+                    transition: all 0.5s ease-out;
                 }
             }
         }

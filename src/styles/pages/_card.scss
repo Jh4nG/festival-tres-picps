@@ -14,7 +14,7 @@
     cursor: pointer;
     overflow: hidden;
     align-items: center;
-    background: linear-gradient(to bottom, $tertiary_dark, gray);
+    background-color: $primary_color !important;
 
     &__container {
         --bs-gutter-x: 1.5rem;
@@ -42,11 +42,12 @@
         font-size: 3em;
         font-weight: bold;
         color: white;
+        filter: drop-shadow(1px 1px 2px black);
         @include breakPoint($medium) {
             font-size: 3.5em;
         }
         @include breakPoint($xlarge) {
-            font-size: 5em;
+            font-size: 7em;
         }
     }
 
@@ -56,6 +57,8 @@
         line-height: normal;
         font-weight: 700;
         margin-bottom: 0.5em;
+        font-style: italic;
+        filter: drop-shadow(1px 1px 2px black);
     }
 
     &:before {
@@ -64,7 +67,7 @@
         z-index: -1;
         top: -16px;
         right: -16px;
-        background: linear-gradient(1500deg, $secondary_dark, lightgray);
+        background: $secondary_dark_medium;
         height: 32px;
         width: 32px;
         border-radius: 32px;
@@ -79,7 +82,7 @@
 
     &:hover .small-desc {
         transition: all 0.5s ease-out;
-        color: rgba(255, 255, 255, 0.8);
+        color: #ffffff !important;
     }
 
     &:hover &-title {
@@ -89,7 +92,7 @@
 
     &:hover &-number {
         transition: all 0.5s ease-out;
-        color: rgba(255, 255, 255, 0.8);
+        color: #ffffff !important;
     }
 }
 .small-desc {
@@ -98,32 +101,11 @@
     line-height: 1.5em;
     color: white;
     text-align: center;
+    filter: drop-shadow(1px 1px 1px black);
     @include breakPoint($medium) {
         font-size: 0.9em;
     }
     @include breakPoint($xlarge) {
         font-size: 1em;
-    }
-}
-
-.go {
-    &-corner {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        width: 2.5em;
-        height: 2.5em;
-        overflow: hidden;
-        top: 0;
-        right: 0;
-        background: linear-gradient(135deg, $tertiary_light_medium, black);
-        border-radius: 0 4px 0 32px;
-    }
-
-    &-arrow {
-        margin-top: -4px;
-        margin-right: -4px;
-        color: white;
     }
 }

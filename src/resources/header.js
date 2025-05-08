@@ -1,5 +1,5 @@
 export const HeaderJson = {
-    img: "./assets/img/principal/logo.png",
+    img: "./assets/img/principal/Logo-2.png",
     headers: [
         {
             id: "festival",

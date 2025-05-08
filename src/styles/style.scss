@@ -9,7 +9,7 @@ body {
 
 #root {
     max-width: 1920px;
-    background-color: rgba($secondary_light, 0.2);
+    background-color: rgba($primary_color, 0.25);
     @include breakPoint($xxxxlarge) {
         min-width: 1920px;
     }
