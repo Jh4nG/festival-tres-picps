@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { scrollToElement } from "../../helpers/pages";
 import { IconClose, IconMenu } from "../../assets/Icons";
 import { HeaderJson } from "../../resources/header";
 import { useNavigate } from "react-router-dom";
+import { scrollToElement } from "../../helpers/pages";
 import "./../../styles/pages/_header.scss";
 
 export const Header = () => {
@@ -22,6 +22,9 @@ export const Header = () => {
                         return;
                     }
                     navigate(`/${header.redirect}`);
+                    setTimeout(() => {
+                        scrollToElement(header.redirect);
+                    }, 200);
                 }}
             >
                 {header.name}
@@ -40,7 +43,7 @@ export const Header = () => {
                     <img
                         className="my-lg-2 mx-4 pointer"
                         src={HeaderJson.img}
-                        onClick={navigate("/")}
+                        onClick={() => navigate("/inicio")}
                     />
                 </div>
                 <div className="d-none d-md-flex header__list col-8 col-md-8 col-lg-7 col-xl-5 justify-content-between align-self-center">

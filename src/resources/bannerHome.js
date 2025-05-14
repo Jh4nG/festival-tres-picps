@@ -4,7 +4,7 @@ export const BannerHomeJSON = [
         title: "",
         img: "./assets/img/bannerHome/1.png",
         redirect: true,
-        path: "Pruebas-2",
+        path: "https://www.google.com",
     },
     {
         id: "2",

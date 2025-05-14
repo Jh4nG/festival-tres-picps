@@ -4,10 +4,6 @@ import BlurText from "./components/BlurText";
 import "./../../styles/pages/_activity.scss";
 
 export const Activity = () => {
-    const handleRedirect = (redirect) => {
-        console.log(redirect);
-    };
-
     return (
         <div>
             <div className="activity__container">

@@ -1,9 +1,9 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import { Home } from "../pages/Home";
-import { EspaciosMuestra } from "../pages/EspaciosMuestra";
-import { SobreFestival } from "../pages/SobreFestival";
-import { Selecciones } from "../pages/Selecciones";
-import { Invitados } from "../pages/Invitados";
+import { EspaciosMuestra } from "../pages/espaciosMuestra/EspaciosMuestra";
+import { SobreFestival } from "../pages/sobreFestival/SobreFestival";
+import { Selecciones } from "../pages/selecciones/Selecciones";
+import { Invitados } from "../pages/Invitados/Invitados";
 
 export const AppRouter = () => {
     return (

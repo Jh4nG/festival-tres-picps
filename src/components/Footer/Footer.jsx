@@ -52,25 +52,25 @@ export const Footer = () => {
             {
                 id: "1",
                 name: "facebook",
-                link: "https://www.facebook.com/aleteotransmedia",
+                link: "https://www.facebook.com/profile.php?id=61575877233035",
                 icon: <IconFacebook />,
             },
             {
                 id: "2",
                 name: "tiktok",
-                link: "https://twitter.com/CChimenea",
+                link: "https://www.tiktok.com/@festivaldecinetrespicos?_t=ZS-8wFYNacvVVo&_r=1",
                 icon: <IconTikTok />,
             },
             {
                 id: "3",
                 name: "instagram",
-                link: "https://www.instagram.com/aleteo_transmedia/",
+                link: "https://www.instagram.com/festival_trespicossuba/",
                 icon: <IconInstagram />,
             },
             {
                 id: "4",
                 name: "youtube",
-                link: "https://www.youtube.com/channel/UCVBNYMpvj4liLG6xSaMCJWQ/featured",
+                link: "https://www.youtube.com/@FestivaldecineTrespicos",
                 icon: <IconYoutube />,
             },
             {
@@ -82,7 +82,7 @@ export const Footer = () => {
             {
                 id: "6",
                 name: "email",
-                link: "mailto:proyectoaleteoproduccion@gmail.com",
+                link: "mailto:festivaldecinetrespicos@gmail.com",
                 icon: <IconEmail />,
             },
         ],

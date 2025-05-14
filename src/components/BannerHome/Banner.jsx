@@ -1,20 +1,20 @@
 import { BannerHomeJSON } from "../../resources/bannerHome";
 import { Carousel } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 import "./../../styles/pages/_banner.scss";
-import { IconNextBanner, IconPrevBanner } from "../../assets/Icons";
 
 export const BannerHome = () => {
+    const navigate = useNavigate();
     const handleRedirect = (redirect) => {
-        console.log(redirect);
+        redirect.includes("http")
+            ? window.open(redirect, "_blank")
+            : navigate(`/${redirect}`);
     };
+
     return (
         <div className="banner">
             <div className="banner__container">
-                <Carousel
-                    data-bs-theme="light"
-                    // nextIcon={<IconNextBanner />}
-                    // prevIcon={<IconPrevBanner />}
-                >
+                <Carousel data-bs-theme="light">
                     {BannerHomeJSON.map((b) => (
                         <Carousel.Item key={b.id}>
                             <img

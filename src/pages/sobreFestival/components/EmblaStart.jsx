@@ -1,7 +1,6 @@
 import useEmblaCarousel from "embla-carousel-react";
 import AutoScroll from "embla-carousel-auto-scroll";
 import { useDotButton } from "./EmblaCarouselDotButton";
-import { Image } from "react-bootstrap";
 import {
     NextButton,
     PrevButton,
@@ -13,8 +12,9 @@ import {
 } from "./EmblaCarouselSelectSnapDisplay";
 import { useNavigate } from "react-router-dom";
 import "./../../../styles/_embla.scss";
+import { EquipoCard } from "../../../components/Equipo/Equipo";
 
-export const EmblaStart = ({ ActivityJSON }) => {
+export const EmblaStartSobreFestival = ({ equipoJson }) => {
     const OPTIONS = { align: "center", loop: true };
 
     const navigate = useNavigate();
@@ -42,28 +42,23 @@ export const EmblaStart = ({ ActivityJSON }) => {
     } = usePrevNextButtons(emblaApi);
     const { selectedSnap, snapCount } = useSelectedSnapDisplay(emblaApi);
 
-    const renderItems = (a) => {
-        return (
-            <div
-                className="embla__slide pointer"
-                key={a.id}
-                onClick={() => {
-                    handleRedirect(a.path);
-                }}
-            >
-                <Image src={a.img} roundedCircle />
-                <h3 className="mt-4">{a.title}</h3>
-                <p>{a.description}</p>
-            </div>
-        );
-    };
-
     return (
         <section className="embla">
-            <div className="embla__viewport" ref={emblaRef}>
-                <div className="embla__container activity__content__carousel">
-                    {ActivityJSON.activitys.map((a) => renderItems(a))}
-                    {ActivityJSON.proyects.map((a) => renderItems(a))}
+            <div className="embla__viewport sobre-festival" ref={emblaRef}>
+                <div className="embla__container sobre-festival__carousel">
+                    {equipoJson.equipo.map((e) => (
+                        <div
+                            key={e.id}
+                            className="col-12 col-sm-6 col-lg-4 col-xl-3"
+                        >
+                            <EquipoCard
+                                nameTitle={e.title}
+                                charge={e.charge}
+                                description={e.description}
+                                img={e.img}
+                            />
+                        </div>
+                    ))}
                 </div>
             </div>
 

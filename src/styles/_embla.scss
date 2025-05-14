@@ -17,6 +17,27 @@
 .embla__viewport {
     overflow: hidden;
     border-radius: 8rem;
+
+    &.sobre-festival {
+        border-radius: 1rem;
+        -webkit-mask-image: linear-gradient(
+            to right,
+            transparent,
+            black 5%,
+            black 95%,
+            transparent
+        );
+        mask-image: linear-gradient(
+            to right,
+            transparent,
+            black 5%,
+            black 95%,
+            transparent
+        );
+
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+    }
 }
 .embla__container {
     backface-visibility: hidden;
