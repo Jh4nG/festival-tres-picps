@@ -1,0 +1,107 @@
+@use "./../variables" as *;
+
+.invitados {
+    p {
+        text-align: justify;
+    }
+    &-description {
+        font-size: 1rem;
+        color: white;
+        filter: drop-shadow(1px 1px 8px black);
+        @include breakPoint($small) {
+            font-size: 1.1rem;
+        }
+        @include breakPoint($large) {
+            font-size: 1.4rem;
+        }
+    }
+
+    &__content {
+        &-div {
+            width: 100%;
+            margin-bottom: 50px;
+
+            &::after {
+                content: "";
+                margin-top: 30px;
+                margin-bottom: 40px;
+                width: 70%;
+                transform: translateX(20%);
+                border-bottom: 1px solid $secondary_dark;
+                @include breakPoint($large) {
+                    width: 50%;
+                    margin-top: 50px;
+                    transform: translateX(60%);
+                }
+            }
+
+            &_img {
+                width: 70%;
+                border-radius: 20rem;
+                display: flex;
+                justify-content: center;
+                &.left {
+                    padding-left: 10px;
+                    background-image: linear-gradient(
+                        to left,
+                        $secondary_dark,
+                        transparent
+                    );
+                    background-position: left;
+                    background-size: 1px 100%;
+
+                    @include breakPoint($large) {
+                        background-size: 0px 100%;
+                    }
+                    @include breakPoint($xlarge) {
+                        background-size: 1px 100%;
+                    }
+                }
+
+                &.right {
+                    padding-right: 10px;
+                    background-image: linear-gradient(
+                        to right,
+                        $secondary_dark,
+                        transparent
+                    );
+                    background-position: right;
+                    background-size: 1px 100%;
+                    @include breakPoint($large) {
+                        background-size: 0px 100%;
+                    }
+                    @include breakPoint($xlarge) {
+                        background-size: 1px 100%;
+                    }
+                }
+
+                img {
+                    width: 100%;
+                }
+
+                @include breakPoint($large) {
+                    width: 100%;
+                }
+
+                @include breakPoint($xlarge) {
+                    width: 86%;
+                }
+            }
+
+            &-info {
+                h1 {
+                    color: $secondary_dark;
+                    filter: drop-shadow(1px 1px 30px black) !important;
+                }
+                i {
+                    color: white;
+                    filter: drop-shadow(1px 1px 8px black);
+                }
+                p {
+                    color: black;
+                    filter: drop-shadow(1px 1px 8px black);
+                }
+            }
+        }
+    }
+}

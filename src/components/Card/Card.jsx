@@ -1,13 +1,17 @@
 import CountUp from "react-countup";
 import { CardJSON } from "../../resources/card";
 import "./../../styles/pages/_card.scss";
+import { useNavigate } from "react-router-dom";
 
 export const Card = () => {
+    const navigate = useNavigate();
     const handleRedirect = (redirect) => {
-        console.log(redirect);
+        redirect.includes("http")
+            ? window.open(redirect, "_blank")
+            : navigate(`/${redirect}`);
     };
     return (
-        <div className="card__container mt-5 my-mb-5 mb-5">
+        <div className="card__container mt-5 my-mb-5 mb-5 animate__animated animate__zoomIn">
             <div className="row">
                 {CardJSON.map((c) => (
                     <div

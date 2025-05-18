@@ -1,0 +1,133 @@
+@use "./../variables" as *;
+
+.selecciones {
+    label {
+        font-weight: bold;
+        font-size: 0.9rem;
+        @include breakPoint($medium) {
+            font-size: 1rem;
+        }
+
+        @include breakPoint($large) {
+            font-size: 1.1rem;
+        }
+    }
+    p {
+        font-size: 0.9rem;
+        @include breakPoint($medium) {
+            font-size: 1rem;
+        }
+    }
+
+    select {
+        border-color: $secondary_dark;
+    }
+
+    &-videos {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        transition: all 0.3s ease-out;
+        &:hover {
+            box-shadow: 0px 1px 15px $secondary_dark;
+        }
+
+        img {
+            border-radius: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        h5 {
+            color: white;
+            filter: drop-shadow(1px 1px 8px black);
+        }
+
+        i {
+            color: $secondary_dark;
+            filter: drop-shadow(1px 1px 8px black);
+        }
+
+        p {
+            font-size: 0.9rem;
+
+            span {
+                color: $secondary_color;
+            }
+        }
+    }
+
+    &-selected {
+        width: 100%;
+
+        iframe {
+            width: 100%;
+            height: 30vh;
+            border-radius: 0.5rem;
+            @include breakPoint($small) {
+                height: 32vh;
+            }
+            @include breakPoint($medium) {
+                height: 40vh;
+            }
+            @include breakPoint($large) {
+                height: 55vh;
+            }
+            @include breakPoint($xlarge) {
+                height: 70vh;
+            }
+        }
+
+        h3 {
+            font-size: 1rem;
+            color: white;
+            filter: drop-shadow(1px 1px 8px black);
+            @include breakPoint($medium) {
+                font-size: 1.2rem;
+            }
+            @include breakPoint($large) {
+                font-size: 1.7rem;
+            }
+        }
+
+        i {
+            color: $secondary_dark;
+            filter: drop-shadow(1px 1px 8px black);
+        }
+
+        p {
+            font-size: 0.9rem;
+            span {
+                color: $secondary_color;
+            }
+        }
+
+        svg {
+            stroke: $secondary_dark;
+        }
+
+        &::after {
+            content: "";
+            width: 70%;
+            margin-top: 0px;
+            margin-bottom: 20px;
+            transform: translateX(20%);
+            border-bottom: 1px solid $secondary_dark;
+            @include breakPoint($large) {
+                width: 70%;
+                margin-top: 20px;
+                transform: translateX(20%);
+            }
+        }
+    }
+
+    &-skeleton {
+        &-img {
+            height: 200px;
+            @include breakPoint($medium) {
+                height: 180px;
+            }
+            @include breakPoint($large) {
+                height: 250px;
+            }
+        }
+    }
+}

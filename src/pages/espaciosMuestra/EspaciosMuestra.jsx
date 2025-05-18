@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Activity } from "../../components/Activity/Activity";
 import { Footer } from "../../components/Footer/Footer";
 import { Header } from "../../components/Header/Header";
@@ -5,9 +6,13 @@ import { CardEspacios } from "./components/CardEspacios";
 import { EspaciosJSON } from "../../resources/espacios";
 import BlurText from "../../components/Activity/components/BlurText";
 import { MapaEspacios } from "./components/Mapa";
+import { scrollToElement } from "../../helpers/pages";
 import "./../../styles/pages/_espacios.scss";
 
 export const EspaciosMuestra = () => {
+    useEffect(() => {
+        scrollToElement("espacios-de-muestra");
+    }, []);
     return (
         <>
             <Header />
@@ -36,7 +41,10 @@ export const EspaciosMuestra = () => {
                     ))}
                 </Row> */}
             </div>
-            <div className="espacios-muestra__map" style={{ width: "100%" }}>
+            <div
+                className="espacios-muestra__map animate__animated animate__zoomInDown"
+                style={{ width: "100%" }}
+            >
                 <MapaEspacios
                     positionInit={EspaciosJSON.positionInit}
                     espaciosMap={EspaciosJSON.espacios}

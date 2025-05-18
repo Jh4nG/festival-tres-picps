@@ -4,6 +4,7 @@ import { EspaciosMuestra } from "../pages/espaciosMuestra/EspaciosMuestra";
 import { SobreFestival } from "../pages/sobreFestival/SobreFestival";
 import { Selecciones } from "../pages/selecciones/Selecciones";
 import { Invitados } from "../pages/Invitados/Invitados";
+import { Inscripciones } from "../pages/inscripciones/Inscripciones";
 
 export const AppRouter = () => {
     return (
@@ -14,6 +15,7 @@ export const AppRouter = () => {
             <Route path="/espacios-de-muestra" element={<EspaciosMuestra />} />
             <Route path="/selecciones" element={<Selecciones />} />
             <Route path="/invitados" element={<Invitados />} />
+            <Route path="/inscripciones" element={<Inscripciones />} />
         </Routes>
     );
 };

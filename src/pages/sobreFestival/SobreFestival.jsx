@@ -1,19 +1,21 @@
+import { useEffect } from "react";
 import { Activity } from "../../components/Activity/Activity";
-import BlurText from "../../components/Activity/components/BlurText";
 import { Footer } from "../../components/Footer/Footer";
 import { Header } from "../../components/Header/Header";
 import { SobreFestivalJSON } from "../../resources/sobreFestival";
 import { EmblaStartSobreFestival } from "./components/EmblaStart";
+import { scrollToElement } from "../../helpers/pages";
+import BlurText from "../../components/Activity/components/BlurText";
 import "./../../styles/pages/_sobre-festival.scss";
 
 export const SobreFestival = () => {
+    useEffect(() => {
+        scrollToElement("sobre-el-festival");
+    }, []);
     return (
         <>
             <Header />
-            <div
-                id="sobre-el-festival"
-                className="sobre-festival container mt-5"
-            >
+            <div id="sobre-el-festival" className="sobre-festival container">
                 <BlurText
                     text={SobreFestivalJSON.title}
                     delay={150}
