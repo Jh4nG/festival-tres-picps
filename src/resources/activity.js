@@ -1,7 +1,7 @@
 import { HeaderJson } from "./header";
 
 export const ActivityJSON = {
-    title: "¡Conozca nuestra actividades y proyectos!",
+    title: "¡Conozca nuestras actividades y proyectos!",
     activitys: [
         // {
         //     id: "1",

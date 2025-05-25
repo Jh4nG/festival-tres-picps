@@ -44,8 +44,8 @@
                 border-radius: 20rem;
                 display: flex;
                 justify-content: center;
-                min-height: 200px;
-                max-height: 200px;
+                min-height: 225px;
+                max-height: 225px;
                 &.left {
                     padding-left: 10px;
                     background-image: linear-gradient(
@@ -112,8 +112,8 @@
                 }
 
                 &.jurado {
-                    min-height: 150px;
-                    max-height: 150px;
+                    min-height: 180px;
+                    max-height: 180px;
 
                     & img {
                         border: 1px solid $secondary_dark;
