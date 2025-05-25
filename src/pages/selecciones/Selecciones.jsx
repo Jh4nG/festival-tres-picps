@@ -24,7 +24,7 @@ export const Selecciones = () => {
                     className="my-4 mb-3 mb-lg-3 sobre-festival__title"
                 />
 
-                <ViewVideos />
+                {/* <ViewVideos /> */}
             </div>
             <Activity />
             <Footer />

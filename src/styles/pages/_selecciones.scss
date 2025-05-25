@@ -130,4 +130,12 @@
             }
         }
     }
+
+    &__banner {
+        h1 {
+            color: white;
+            filter: drop-shadow(1px 1px 8px black);
+        }
+        background-color: $secondary_color;
+    }
 }

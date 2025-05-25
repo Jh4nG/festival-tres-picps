@@ -12,7 +12,7 @@ export const Card = () => {
     };
     return (
         <div className="card__container mt-5 my-mb-5 mb-5 animate__animated animate__zoomIn">
-            <div className="row">
+            <div className="row justify-content-center">
                 {CardJSON.map((c) => (
                     <div
                         key={c.id}
@@ -22,9 +22,15 @@ export const Card = () => {
                         }}
                     >
                         <div className="card">
-                            <p className="card-number">
-                                <CountUp end={c.number} duration={5} />
-                            </p>
+                            {c.number == 0 ? (
+                                <span className="card-processing">
+                                    En proceso
+                                </span>
+                            ) : (
+                                <p className="card-number">
+                                    <CountUp end={c.number} duration={5} />
+                                </p>
+                            )}
                             <p className="card-title">{c.title}</p>
                             <p className="small-desc">{c.description}</p>
                         </div>

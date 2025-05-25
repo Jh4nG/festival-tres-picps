@@ -1,4 +1,5 @@
 import { HeaderJson } from "./header";
+import { SeleccionesJSON } from "./selecciones";
 
 export const CardJSON = [
     {
@@ -11,11 +12,11 @@ export const CardJSON = [
     },
     {
         id: 2,
-        number: 10,
-        title: HeaderJson.headers.find((h) => h.id === "selecciones").name,
+        number: 0, // SeleccionesJSON.videos.length,
+        title: "Selecciones", // HeaderJson.headers.find((h) => h.id === "selecciones").name,
         description:
             "Mira las piezas seleccionadas del festival y descubre el cine que se hace en Suba.",
-        path: HeaderJson.headers.find((h) => h.id === "selecciones").redirect,
+        path: "", //HeaderJson.headers.find((h) => h.id === "selecciones").redirect,
     },
     {
         id: 3,

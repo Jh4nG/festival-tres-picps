@@ -27,6 +27,10 @@
             padding: 0.4rem 1rem;
             background-color: $secondary_dark;
         }
+
+        &-jurado {
+            background: linear-gradient(black 5%, $primary_dark 230%);
+        }
     }
 
     &_button {

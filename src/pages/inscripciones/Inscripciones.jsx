@@ -48,16 +48,16 @@ export const Inscripciones = () => {
                         </div>
                     ))}
                 </div>
-
-                <BlurText
-                    text={InscripcionesJSON.titleJurado}
-                    delay={150}
-                    animateBy="words"
-                    direction="top"
-                    className="my-4 mb-3 mb-lg-3 sobre-festival__title"
-                />
-
-                <div className="invitados__content mt-5">
+            </div>
+            <div className="inscripciones-content-jurado">
+                <div className="container">
+                    <BlurText
+                        text={InscripcionesJSON.titleJurado}
+                        delay={150}
+                        animateBy="words"
+                        direction="top"
+                        className="my-4 mb-3 mb-lg-3 sobre-festival__title"
+                    />
                     {InscripcionesJSON.jurado.map((j, i) => (
                         <div
                             className="row invitados__content-div jurados"
