@@ -1,6 +1,6 @@
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
-import MakrerUrl from "./../../../../public/assets/img/espacios/pico.svg";
+import MakrerUrl from "./../../../../src/assets/img/espacios/pico.svg";
 import { Marker, useMap } from "react-leaflet";
 
 const CustomMarker = ({ position, children }) => {

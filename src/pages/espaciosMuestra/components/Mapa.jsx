@@ -2,18 +2,17 @@ import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
 import CustomMarker from "./CustomMarket";
 
 export const MapaEspacios = ({ positionInit, espaciosMap }) => {
-    const position = [51.505, -0.09];
-
+    const zoomInit = window.innerWidth < 768 ? 13 : 16;
     return (
-        <MapContainer center={positionInit} zoom={16} scrollWheelZoom={false}>
+        <MapContainer
+            center={positionInit}
+            zoom={zoomInit}
+            scrollWheelZoom={false}
+        >
             <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <Marker position={position}>
-                <Popup></Popup>
-            </Marker>
-
             {espaciosMap.map(
                 (e) =>
                     e.position && (

@@ -28,4 +28,27 @@
             background-color: $secondary_dark;
         }
     }
+
+    &_button {
+        position: fixed;
+        bottom: 10%;
+        right: 0;
+        background-color: $secondary_dark;
+        color: white;
+        border: none;
+        border-radius: 5px 0 0 5px;
+        writing-mode: sideways-lr;
+        text-orientation: mixed;
+        transition: all 0.3s ease;
+        font-weight: bold;
+        z-index: 999;
+        cursor: pointer;
+        padding: 10px 5px;
+        font-size: 0.8rem;
+        opacity: 0.7;
+        @include breakPoint($medium) {
+            font-size: 1rem;
+            padding: 10px 10px;
+        }
+    }
 }

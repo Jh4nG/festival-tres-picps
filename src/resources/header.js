@@ -21,5 +21,10 @@ export const HeaderJson = {
             name: "Invitados",
             redirect: "invitados",
         },
+        {
+            id: "inscripciones",
+            name: "Inscripciones",
+            redirect: "inscripciones",
+        },
     ],
 };

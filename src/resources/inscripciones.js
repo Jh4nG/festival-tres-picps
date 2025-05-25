@@ -1,6 +1,6 @@
 export const InscripcionesJSON = {
     title: "Inscripciones",
-    titleJurado: "Nuestro jurado",
+    titleJurado: "Jurados",
     inscripciones: [
         {
             id: 1,
@@ -17,20 +17,82 @@ export const InscripcionesJSON = {
     ],
     jurado: [
         {
-            id: 1,
-            title: "Edison González (Invitado de la casa)",
-            charge: "Tallerista - Moderador",
-            description:
-                "Apasionado por el cine, cineclubista, con máster en guion de la Universidad Internacional de la Rioja de España. Organizador de proyectos como festivales audiovisuales, creación y formación audiovisual, entre los que destacan: Muestra tus cortos como organizador y en el Festival Internacional de Cine y Metal - FICIME (2019), como director del espacio de Rutas del metal. Productor general de la serie web Agarrando Feria. Director y guionista del largometraje El viejo y el baúl, su ópera prima. Showrunner y director de los proyectos de narrativas interactivas Aleteo - Transmedia y el Documental Interactivo Rostros y espacios. Fundador, director y formador del semillero audiovisual sonoro de la Fundación Sinéstesis. Director, productor y guionista de diversos cortometrajes de ficción y documental con selección en festivales a nivel latinoamericano.",
-            img: "./assets/img/sobreFestival/equipo/Ed.jpg",
+            title: "Cortometrajes de Ficción",
+            personas: [
+                {
+                    id: 1,
+                    title: "Dayana González",
+                    charge: "Directora y guionista",
+                    description: "(Jurado Distrital)",
+                    img: "./assets/img/inscripciones/jurado/Dayana-González.jpeg",
+                },
+                {
+                    id: 2,
+                    title: "Claudia Yepes",
+                    charge: "Productora de cine",
+                    description: "(Jurado Local)",
+                    img: "./assets/img/inscripciones/jurado/Claudia-Yepes_.jpg",
+                },
+                {
+                    id: 3,
+                    title: "Edison González",
+                    charge: "Productor y director",
+                    description: "(Jurado La Chimenea Cultural)",
+                    img: "./assets/img/inscripciones/jurado/Director-productorf.jpg",
+                },
+            ],
         },
         {
-            id: 2,
-            title: "Geovanny Hernandez",
-            charge: "Curador",
-            description:
-                "Apasionado por el cine, cineclubista, con máster en guion de la Universidad Internacional de la Rioja de España. Organizador de proyectos como festivales audiovisuales, creación y formación audiovisual, entre los que destacan: Muestra tus cortos como organizador y en el Festival Internacional de Cine y Metal - FICIME (2019), como director del espacio de Rutas del metal. Productor general de la serie web Agarrando Feria. Director y guionista del largometraje El viejo y el baúl, su ópera prima. Showrunner y director de los proyectos de narrativas interactivas Aleteo - Transmedia y el Documental Interactivo Rostros y espacios. Fundador, director y formador del semillero audiovisual sonoro de la Fundación Sinéstesis. Director, productor y guionista de diversos cortometrajes de ficción y documental con selección en festivales a nivel latinoamericano.",
-            img: "./assets/img/sobreFestival/equipo/Geo.jpg",
+            title: "Cortometrajes de documental",
+            personas: [
+                {
+                    id: 1,
+                    title: "Sandra Sánchez",
+                    charge: "Directora y guionista",
+                    description: "(Jurado Distrital)",
+                    img: "./assets/img/inscripciones/jurado/Sandra-Sanchez.jpeg",
+                },
+                {
+                    id: 2,
+                    title: "Leonardo Lovera",
+                    charge: "Director de cine",
+                    description: "(Jurado Local)",
+                    img: "./assets/img/inscripciones/jurado/Leonardo-Lovera.jpg",
+                },
+                {
+                    id: 3,
+                    title: "Laura Mora",
+                    charge: "Directora de cine",
+                    description: "(Jurado La Chimenea Cultural)",
+                    img: "./assets/img/inscripciones/jurado/Laura-Mora.jpeg",
+                },
+            ],
+        },
+        {
+            title: "Videoclip",
+            personas: [
+                {
+                    id: 1,
+                    title: "José Silva",
+                    charge: "Director de fotografía",
+                    description: "(Jurado Distrital)",
+                    img: "./assets/img/inscripciones/jurado/Jose-Silva.jpg",
+                },
+                {
+                    id: 2,
+                    title: "Ricardo Gamez",
+                    charge: "Productor musical",
+                    description: "(Jurado Local)",
+                    img: "./assets/img/inscripciones/jurado/Ricardo-Gamez.jpeg",
+                },
+                {
+                    id: 3,
+                    title: "Kevin Sánchez",
+                    charge: "Músico y productor",
+                    description: "(Jurado La Chimenea Cultural)",
+                    img: "./assets/img/inscripciones/jurado/Kevin-Sanchez.jpeg",
+                },
+            ],
         },
     ],
 };

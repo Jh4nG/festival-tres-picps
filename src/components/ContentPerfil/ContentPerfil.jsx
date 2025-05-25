@@ -6,7 +6,7 @@ export const ContentPerfil = ({ data }) => {
                     className="invitados__content-div row m-0 animate__animated animate__zoomIn"
                     key={i.id}
                 >
-                    <div className="col-12 col-lg-6 col-xl-4 d-flex justify-content-center">
+                    <div className="col-12 col-lg-6 col-xl-4 d-flex justify-content-center align-items-center">
                         <div
                             className={`invitados__content-div_img mb-4 mb-lg-0 ${
                                 e % 2 == 0 ? "right" : "left"
@@ -23,7 +23,11 @@ export const ContentPerfil = ({ data }) => {
                         <div className="invitados__content-div-info">
                             <h1>{i.title}</h1>
                             <i>{i.charge}</i>
-                            <p>{i.description}</p>
+                            <p
+                                dangerouslySetInnerHTML={{
+                                    __html: i.description,
+                                }}
+                            ></p>
                         </div>
                     </div>
                 </div>

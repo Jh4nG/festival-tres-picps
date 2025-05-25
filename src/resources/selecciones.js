@@ -3,7 +3,7 @@ export const SeleccionesJSON = {
     selecciones: [
         {
             id: "pico-central",
-            title: "Pico Central - Nevado del Ruíz",
+            title: "Pico Central - Nevado del Ruíz (Cortometrajes)",
             subSections: [
                 {
                     id: "ficcion",
@@ -17,12 +17,12 @@ export const SeleccionesJSON = {
         },
         {
             id: "pico-oriental",
-            title: "Pico oriental - Nevado Santa Isabel",
+            title: "Pico oriental - Nevado Santa Isabel (Videoclips)",
             subSections: [],
         },
         {
             id: "pico-occidental",
-            title: "Pico occidental - Nevado del Tolima",
+            title: "Pico occidental - Nevado del Tolima (Filminutos - Actividad Clickatón Sua)",
             subSections: [],
         },
     ],

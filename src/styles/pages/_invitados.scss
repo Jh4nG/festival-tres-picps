@@ -77,14 +77,63 @@
 
                 img {
                     width: 100%;
+                    object-fit: cover;
+                    object-position: top;
                 }
 
+                min-height: 200px;
+                max-height: 200px;
+                @include breakPoint($small) {
+                    min-height: 345px;
+                    max-height: 345px;
+                }
+                @include breakPoint($medium) {
+                    min-height: 465px;
+                    max-height: 465px;
+                }
                 @include breakPoint($large) {
-                    width: 100%;
+                    min-height: 345px;
+                    max-height: 345px;
                 }
 
                 @include breakPoint($xlarge) {
+                    width: 100%;
+                    min-height: 330px;
+                    max-height: 330px;
+                }
+                @include breakPoint($xxlarge) {
                     width: 86%;
+                    min-height: 350px;
+                    max-height: 350px;
+                }
+
+                &.jurado {
+                    min-height: 150px;
+                    max-height: 150px;
+                    @include breakPoint($small) {
+                        min-height: 120px;
+                        max-height: 120px;
+                    }
+                    @include breakPoint($medium) {
+                        min-height: 110px;
+                        max-height: 110px;
+                    }
+                    @include breakPoint($large) {
+                        width: 100%;
+                        min-height: 150px;
+                        max-height: 150px;
+                    }
+
+                    @include breakPoint($xlarge) {
+                        width: 100%;
+                        min-height: 180px;
+                        max-height: 180px;
+                    }
+                    @include breakPoint($xxlarge) {
+                        width: 100%;
+                        min-height: 220px;
+                        max-height: 220px;
+                    }
                 }
             }
 
@@ -100,6 +149,19 @@
                 p {
                     color: black;
                     filter: drop-shadow(1px 1px 8px black);
+                }
+            }
+
+            &.jurados {
+                h1 {
+                    color: $secondary_dark;
+                    font-weight: bold;
+                    filter: drop-shadow(1px 1px 30px black) !important;
+                }
+                h3 {
+                    color: $secondary_dark;
+                    font-weight: bold;
+                    filter: drop-shadow(1px 1px 30px black) !important;
                 }
             }
         }

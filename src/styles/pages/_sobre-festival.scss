@@ -23,6 +23,12 @@
         font-size: 1.1rem;
         color: black;
         text-align: justify;
+        a {
+            color: $tertiary_dark;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
         @include breakPoint($xlarge) {
             font-size: 1.3rem;
         }

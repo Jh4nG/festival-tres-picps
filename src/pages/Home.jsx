@@ -1,9 +1,9 @@
 import { Activity } from "../components/Activity/Activity";
-// import LiquidChrome from "../components/BackgroudColor/LiquidChrome";
 import { BannerHome } from "../components/BannerHome/Banner";
 import { Card } from "../components/Card/Card";
 import { Footer } from "../components/Footer/Footer";
 import { Header } from "../components/Header/Header";
+// import LiquidChrome from "../components/BackgroudColor/LiquidChrome";
 
 export const Home = () => {
     return (

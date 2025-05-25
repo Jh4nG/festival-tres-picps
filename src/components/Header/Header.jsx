@@ -46,7 +46,7 @@ export const Header = () => {
                         onClick={() => navigate("/inicio")}
                     />
                 </div>
-                <div className="d-none d-md-flex header__list col-8 col-md-8 col-lg-7 col-xl-5 justify-content-between align-self-center">
+                <div className="d-none d-md-flex header__list col-8 col-md-8 col-lg-7 col-xl-6 justify-content-between align-self-center">
                     {HeaderJson.headers.map((header) => renderListItem(header))}
                 </div>
 
