@@ -13,7 +13,7 @@ export const BannerHome = () => {
 
     return (
         <div className="banner">
-            <div className="banner__container">
+            <div className="banner__container p-0 container-md mt-md-5">
                 <Carousel data-bs-theme="light">
                     {BannerHomeJSON.map((b) => (
                         <Carousel.Item key={b.id}>

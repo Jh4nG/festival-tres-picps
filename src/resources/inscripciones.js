@@ -76,7 +76,7 @@ export const InscripcionesJSON = {
                     title: "José Silva",
                     charge: "Director de fotografía",
                     description: "(Jurado Distrital)",
-                    img: "./assets/img/inscripciones/jurado/Jose-Silva.jpg",
+                    img: "./assets/img/inscripciones/jurado/Jose-Silva.jpeg",
                 },
                 {
                     id: 2,

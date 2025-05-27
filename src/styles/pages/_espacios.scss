@@ -27,6 +27,7 @@
     }
 
     &__map {
+        height: 60vh;
         -webkit-mask-image: linear-gradient(
             transparent,
             black 5%,
@@ -42,6 +43,10 @@
 
         -webkit-mask-repeat: no-repeat;
         mask-repeat: no-repeat;
+
+        @include breakPoint($medium) {
+            height: auto;
+        }
     }
 
     &__market {

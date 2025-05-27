@@ -12,14 +12,6 @@ export const InvitadosJSON = {
             img: "./assets/img/invitados/principales/Leonardo-Lovera.jpg",
         },
         {
-            id: 2,
-            title: "Edison González (Invitado de la casa)",
-            charge: "Tallerista - Moderador",
-            description:
-                "Apasionado por el cine, cineclubista, con máster en guion de la Universidad Internacional de la Rioja de España. Organizador de proyectos como festivales audiovisuales, creación y formación audiovisual, entre los que destacan: Muestra tus cortos como organizador y en el Festival Internacional de Cine y Metal - FICIME (2019), como director del espacio de Rutas del metal. Productor general de la serie web Agarrando Feria. Director y guionista del largometraje El viejo y el baúl, su ópera prima. Showrunner y director de los proyectos de narrativas interactivas Aleteo - Transmedia y el Documental Interactivo Rostros y espacios. Fundador, director y formador del semillero audiovisual sonoro de la Fundación Sinéstesis. Director, productor y guionista de diversos cortometrajes de ficción y documental con selección en festivales a nivel latinoamericano. <br /> Entre sus piezas se destacan El caballero del baúl (2021); Migajas para Gretel (2022), El proyecto Aleteo - Transmedia (2021-25) y Tándem (2024).",
-            img: "./assets/img/invitados/principales/Director-productorf.jpg",
-        },
-        {
             id: 3,
             title: "Dayana González (Invitada Distrital)",
             charge: "Directora de cine",
@@ -31,8 +23,9 @@ export const InvitadosJSON = {
             id: 5,
             title: "José Silva (Invitado Distrital)",
             charge: "",
-            description: "",
-            img: "./assets/img/invitados/principales/Jose-Silva.jpg",
+            description:
+                "Realizador de Cine de la universidad Nacional de Colombia, con Maestría en Dirección de Fotografía en Cine Digital de la escuela española de cine e imagen EFTI, con experiencia en liderar equipos de Fotografía en búsqueda de fortalecer desde la imagen la creación de obras audiovisuales para diversos públicos, amplia experiencia en publicidad, ficción y documental. <br />Aporta una mirada publicitaria a diferentes géneros audiovisuales en busca de alcanzar a transmitir las ideas buscadas de una manera creativa y que alcance la mayor cantidad de publico. <br /> Dentro de su filmografía como director de fotografía se encuentran: ¨Golpes en el alma¨(2013) y “Nowhere”(2020)",
+            img: "./assets/img/invitados/principales/Jose-Silva.jpeg",
         },
         {
             id: 4,
@@ -41,6 +34,14 @@ export const InvitadosJSON = {
             description:
                 "Filósofo, magister en educación y estudiante de doctorando en filosofía, especializado en estética, filosofía del cine y de la educación. Investigador social en educación, gestor cultural en el sector audiovisual, coordinador del cineclub y productora escolar La Caja Negra, del colegio INEM de la localidad de Kennedy. Guionista, director y productor de distintos proyectos audiovisuales. Director del cineclub y productora escolar La Caja Negra. Codirector de Topos-film: territorios de cine y educación (2025). Director de Siervo de Dios (2022). Asesor educativo y miembro de la junta directiva de Historias en Kilómetros. Realizador y asistente en múltiples proyectos de realización escolares, comunitarios y profesionales.",
             img: "./assets/img/invitados/principales/Juan-Camilo-Rodríguez.jpeg",
+        },
+        {
+            id: 2,
+            title: "Edison González (Invitado de la casa)",
+            charge: "Tallerista - Moderador",
+            description:
+                "Apasionado por el cine, cineclubista, con máster en guion de la Universidad Internacional de la Rioja de España. Organizador de proyectos como festivales audiovisuales, creación y formación audiovisual, entre los que destacan: Muestra tus cortos como organizador y en el Festival Internacional de Cine y Metal - FICIME (2019), como director del espacio de Rutas del metal. Productor general de la serie web Agarrando Feria. Director y guionista del largometraje El viejo y el baúl, su ópera prima. Showrunner y director de los proyectos de narrativas interactivas Aleteo - Transmedia y el Documental Interactivo Rostros y espacios. Fundador, director y formador del semillero audiovisual sonoro de la Fundación Sinéstesis. Director, productor y guionista de diversos cortometrajes de ficción y documental con selección en festivales a nivel latinoamericano. <br /> Entre sus piezas se destacan El caballero del baúl (2021); Migajas para Gretel (2022), El proyecto Aleteo - Transmedia (2021-25) y Tándem (2024).",
+            img: "./assets/img/invitados/principales/Director-productorf.jpg",
         },
     ],
 };
