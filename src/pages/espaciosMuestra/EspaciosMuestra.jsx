@@ -50,6 +50,25 @@ export const EspaciosMuestra = () => {
                     espaciosMap={EspaciosJSON.espacios}
                 />
             </div>
+            <div className="container">
+                <BlurText
+                    text={EspaciosJSON.titleProgramacion}
+                    delay={150}
+                    animateBy="words"
+                    direction="top"
+                    className="my-4 mb-3 mb-lg-3 espacios-muestra__title"
+                />
+                <div className="inscripciones-content row">
+                    {EspaciosJSON.programacion.map((j, i) => (
+                        <div
+                            className="col-12 col-sm-6 text-center mb-5 mb-md-0 animate__animated animate__zoomIn"
+                            key={j}
+                        >
+                            <img className="mb-3" width={"100%"} src={j.img} />
+                        </div>
+                    ))}
+                </div>
+            </div>
             <Activity />
             <Footer />
         </>
