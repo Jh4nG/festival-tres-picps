@@ -92,9 +92,9 @@ export const ViewVideos = () => {
         }, 700);
     }, []);
     return (
-        <div className="row">
-            <div id="selectCategory" className="col-12 col-sm-6">
-                <label>Categoría</label>
+        <div className="row justify-content-center">
+            <div id="selectCategory" className="col-12 col-sm-5">
+                <label className="mb-2">Categoría</label>
                 <select
                     id="category"
                     name="category"
@@ -109,27 +109,11 @@ export const ViewVideos = () => {
                     ))}
                 </select>
             </div>
-            <div className="col-12 col-sm-6">
-                <label>Secciones</label>
-                <select
-                    id="section"
-                    name="section"
-                    className="form-control"
-                    onChange={handleSection}
-                >
-                    <option value="">Todos</option>
-                    {category &&
-                        SeleccionesJSON.selecciones
-                            .filter((s) => s.id == category)[0]
-                            .subSections?.map((sS, i) => (
-                                <option key={i} value={sS.id}>
-                                    {sS.title}
-                                </option>
-                            ))}
-                </select>
-            </div>
             <div id="countVideos" className="col-12 mt-2">
-                <p>Cantidad de vídeos: {viewVideos ? viewVideos.length : 0}</p>
+                <p>
+                    <b>Cantidad de vídeos:</b>{" "}
+                    {viewVideos ? viewVideos.length : 0}
+                </p>
             </div>
 
             {videoSelected && (
@@ -153,23 +137,6 @@ export const ViewVideos = () => {
                         referrerPolicy="strict-origin-when-cross-origin"
                         allowFullScreen
                     ></iframe>
-                    <i className="mt-2">
-                        {
-                            SeleccionesJSON.selecciones.find(
-                                (c) => c.id == videoSelected.category
-                            ).title
-                        }{" "}
-                        -{" "}
-                        {SeleccionesJSON.selecciones.find(
-                            (c) => c.id == videoSelected.category
-                        ).subSections.length > 0
-                            ? SeleccionesJSON.selecciones
-                                  .find((c) => c.id == videoSelected.category)
-                                  .subSections.find(
-                                      (s) => s.id == videoSelected.section
-                                  ).title
-                            : videoSelected.section}
-                    </i>
                     <p>{videoSelected.description}</p>
                 </div>
             )}
@@ -187,23 +154,7 @@ export const ViewVideos = () => {
                               }/0.jpg`}
                           />
                           <h5>{v.title}</h5>
-                          <i>
-                              {
-                                  SeleccionesJSON.selecciones.find(
-                                      (c) => c.id == v.category
-                                  ).title
-                              }{" "}
-                              -{" "}
-                              {SeleccionesJSON.selecciones.find(
-                                  (c) => c.id == v.category
-                              ).subSections.length > 0
-                                  ? SeleccionesJSON.selecciones
-                                        .find((c) => c.id == v.category)
-                                        .subSections.find(
-                                            (s) => s.id == v.section
-                                        ).title
-                                  : v.section}
-                          </i>
+                          <i>{v.section}</i>
                           <p>
                               {shortDescription(v.description)}{" "}
                               <span>Ver más.</span>

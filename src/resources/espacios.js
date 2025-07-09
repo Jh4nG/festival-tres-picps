@@ -81,7 +81,7 @@ export const EspaciosJSON = {
             img: "./assets/img/espacios/Programacion_1.jpg",
         },
         {
-            img: "./assets/img/espacios/Programacion_2.png",
+            img: "./assets/img/espacios/Programacion_2.jpeg",
         },
     ],
 };

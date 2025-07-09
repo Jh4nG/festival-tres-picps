@@ -11,11 +11,11 @@ export const HeaderJson = {
             name: "Espacios de muestra",
             redirect: "espacios-de-muestra",
         },
-        // {
-        //     id: "selecciones",
-        //     name: "Selecciones",
-        //     redirect: "selecciones",
-        // },
+        {
+            id: "selecciones",
+            name: "Selecciones",
+            redirect: "selecciones",
+        },
         {
             id: "invitados",
             name: "Invitados",
