@@ -1,0 +1,15 @@
+@use "./../variables" as *;
+
+.modal {
+    &-header {
+        color: white;
+        background-color: $primary-color;
+        border: none !important;
+        font-size: 1.5rem !important;
+        width: 100%;
+
+        @include breakPoint($medium) {
+            font-size: 2.5rem !important;
+        }
+    }
+}

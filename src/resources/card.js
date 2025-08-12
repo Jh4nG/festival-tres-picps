@@ -10,14 +10,14 @@ export const CardJSON = [
             "Conoce los espacios de esta versión del festival. Fechas y muestras",
         path: HeaderJson.headers.find((h) => h.id === "espacios").redirect,
     },
-    // {
-    //     id: 2,
-    //     number: 37, //SeleccionesJSON.videos.length,
-    //     title: HeaderJson.headers.find((h) => h.id === "selecciones").name,
-    //     description:
-    //         "Mira las piezas seleccionadas del festival y descubre el cine que se hace en Suba.",
-    //     path: HeaderJson.headers.find((h) => h.id === "selecciones").redirect,
-    // },
+    {
+        id: 2,
+        number: 1,
+        title: "Memorias del festival",
+        description:
+            "Conoce todo lo referente a nuestro festival y sus 45 piezas en muestra en su <b>Fanzine</b>.",
+        path: "viewModal",
+    },
     {
         id: 3,
         number: 5,
