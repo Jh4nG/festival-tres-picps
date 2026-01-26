@@ -2,22 +2,22 @@ export const BannerHomeJSON = [
     {
         id: "1",
         title: "",
-        img: "./assets/img/bannerHome/1.png",
+        img: "./assets/img/bannerHome/1.jpeg",
         redirect: true,
-        path: "inscripciones",
+        path: "https://labdecortometrajes.festivalcinetrespicos.com/",
     },
     {
         id: "2",
         title: "",
-        img: "./assets/img/bannerHome/2.png",
+        img: "./assets/img/bannerHome/2.jpeg",
         redirect: true,
-        path: "espacios-de-muestra",
+        path: "https://forms.gle/JBdmqQFdrwmaA59N8",
     },
     {
         id: "3",
         title: "",
-        img: "./assets/img/bannerHome/4.png",
-        redirect: true,
+        img: "./assets/img/bannerHome/3.jpeg",
+        redirect: false,
         path: "invitados",
     },
 ];

@@ -1,7 +1,7 @@
 export const EspaciosJSON = {
-    title: "Espacios de muestra",
+    title: "Espacios de muestra 2025",
     positionInit: [4.7419334, -74.09871],
-    titleProgramacion: "Programación",
+    titleProgramacion: "Programación 2025",
     espacios: [
         {
             id: 1,

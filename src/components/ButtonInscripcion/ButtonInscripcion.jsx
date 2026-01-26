@@ -7,12 +7,19 @@ export const ButtonInscripcion = () => {
     return (
         <div
             className="inscripciones_button"
-            onClick={() =>
+            onClick={() => {
+                const redirect = HeaderJson.headers.find(
+                    (h) => h.id == "inscripciones",
+                ).redirect;
+                if (redirect.includes("http")) {
+                    window.open(redirect, "_blank");
+                    return;
+                }
                 navigate(
                     HeaderJson.headers.find((h) => h.id == "inscripciones")
-                        .redirect
-                )
-            }
+                        .redirect,
+                );
+            }}
         >
             Inscripciones
         </div>

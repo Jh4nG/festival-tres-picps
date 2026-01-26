@@ -20,9 +20,10 @@ export const CardJSON = [
     },
     {
         id: 3,
-        number: 5,
+        number: 4,
         title: HeaderJson.headers.find((h) => h.id === "invitados").name,
-        description: "Perfiles de nuestros invitados y talleristas.",
+        description:
+            "Conoce a los invitados de nuestro laboratorio de cortos en desarrollo - Miradas de un mismo horizonte.",
         path: HeaderJson.headers.find((h) => h.id === "invitados").redirect,
     },
 ];

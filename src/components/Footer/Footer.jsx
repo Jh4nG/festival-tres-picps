@@ -27,11 +27,6 @@ export const Footer = () => {
         ],
         logos: [
             {
-                id: "localidad",
-                name: "MCL",
-                img: "./assets/img/Logos/Suba-V1.png",
-            },
-            {
                 id: "1",
                 name: "La chimenea",
                 img: "./assets/img/Logos/2LogoChimenea.png",
@@ -130,12 +125,12 @@ export const Footer = () => {
                                 className="footer__logos-alcaldia"
                                 src={
                                     FooterJSON.logoOrganizadores.find(
-                                        (l) => l.id == "alcaldia"
+                                        (l) => l.id == "alcaldia",
                                     ).img
                                 }
                                 alt={
                                     FooterJSON.logoOrganizadores.find(
-                                        (l) => l.id == "alcaldia"
+                                        (l) => l.id == "alcaldia",
                                     ).name
                                 }
                             />

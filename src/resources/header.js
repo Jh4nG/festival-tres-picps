@@ -8,7 +8,7 @@ export const HeaderJson = {
         },
         {
             id: "espacios",
-            name: "Espacios de muestra",
+            name: "Espacios de muestra - 2025",
             redirect: "espacios-de-muestra",
         },
         // {
@@ -18,13 +18,14 @@ export const HeaderJson = {
         // },
         {
             id: "invitados",
-            name: "Invitados",
-            redirect: "invitados",
+            name: "Invitados LAB",
+            redirect:
+                "https://labdecortometrajes.festivalcinetrespicos.com/#invitados",
         },
         {
             id: "inscripciones",
-            name: "Inscripciones",
-            redirect: "inscripciones",
+            name: "Inscripciones LAB",
+            redirect: "https://forms.gle/JBdmqQFdrwmaA59N8",
         },
     ],
 };

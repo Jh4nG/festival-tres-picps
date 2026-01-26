@@ -18,6 +18,10 @@ export const Header = () => {
                 }`}
                 key={header.id}
                 onClick={() => {
+                    if (header.redirect.includes("http")) {
+                        window.open(header.redirect, "_blank");
+                        return;
+                    }
                     if (path === `/${header.redirect}`) {
                         return;
                     }
@@ -69,7 +73,7 @@ export const Header = () => {
                         <div className="d-flex justify-content-center">
                             <div className="row col-11 mx-0 mt-4">
                                 {HeaderJson.headers.map((header) =>
-                                    renderListItem(header)
+                                    renderListItem(header),
                                 )}
                             </div>
                         </div>
