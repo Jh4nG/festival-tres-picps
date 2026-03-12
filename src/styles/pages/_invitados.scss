@@ -85,7 +85,13 @@
                     width: 100%;
                     object-fit: cover;
                     object-position: top;
-                    filter: grayscale(1);
+                    filter: grayscale(0.7);
+                    transition: filter 0.4s ease, transform 0.4s ease;
+
+                    &:hover {
+                        filter: grayscale(0);
+                        transform: scale(1.02);
+                    }
                 }
 
                 @include breakPoint($small) {
@@ -150,14 +156,19 @@
                 h1 {
                     color: $secondary_dark;
                     filter: drop-shadow(1px 1px 30px black) !important;
+                    font-weight: 800;
+                    letter-spacing: 0.02em;
                 }
                 i {
                     color: white;
                     filter: drop-shadow(1px 1px 8px black);
+                    font-style: italic;
+                    font-weight: 500;
                 }
                 p {
                     color: black;
                     filter: drop-shadow(1px 1px 8px black);
+                    line-height: 1.7;
                 }
             }
 

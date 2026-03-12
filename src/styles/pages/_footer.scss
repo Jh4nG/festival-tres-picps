@@ -4,7 +4,7 @@
     width: 100%;
     color: white;
     justify-content: center;
-    background: $primary_color;
+    background: linear-gradient(180deg, $primary_color 0%, $primary_dark_medium 100%);
     &__container {
         padding-right: calc(var(--bs-gutter-x) * 0.5);
         padding-left: calc(var(--bs-gutter-x) * 0.5);
@@ -45,15 +45,19 @@
     &__secciones {
         h4 {
             filter: drop-shadow(1px 1px 1px black);
+            color: var(--tinta-alta);
         }
         &__div {
             font-size: 0.8rem;
-            transition: font-size 0.3s ease;
-            color: $secondary_light;
-            filter: drop-shadow(0px 0px 10px black);
+            // Layout-safe transition: color/opacity instead of font-size
+            // (interface-design: "layout-shift-avoid" — font-size changes cause reflow)
+            transition: color 0.2s ease, opacity 0.2s ease;
+            color: var(--tinta-media);
+            cursor: pointer;
 
             &:hover {
-                font-size: 1.1rem;
+                color: var(--tinta-alta);
+                opacity: 0.9;
             }
 
             @include breakPoint($medium) {
@@ -107,8 +111,8 @@
 
     &__copy {
         font-size: 0.6rem;
-        color: white;
-        background-color: black;
+        color: rgba(255, 255, 255, 0.8);
+        background-color: rgba(0, 0, 0, 0.7);
         @include breakPoint($small) {
             font-size: 0.7rem;
         }
@@ -153,6 +157,8 @@
         }
         &_faico a:hover {
             color: #ffffff;
+            transform: scale(1.15);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
         &_faicon-instagram:hover {
             background-color: #ea4c89;

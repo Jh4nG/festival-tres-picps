@@ -25,6 +25,10 @@ $tertiary_light_medium: #66c4f1;
 $tertiary_dark: #0592d6;
 $tertiary_dark_medium: #18a2e4;
 
+// TYPOGRAPHY — Oswald (cinematic display) + Inter (clean body)
+$font-display: "Oswald", system-ui, sans-serif;
+$font-body: "Inter", system-ui, sans-serif;
+
 // MIXIN
 @mixin breakPoint($size) {
     @media (min-width: $size) {

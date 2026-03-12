@@ -14,7 +14,11 @@
     cursor: pointer;
     overflow: hidden;
     align-items: center;
-    background-color: $primary_color !important;
+    background: linear-gradient(135deg, $primary_dark_medium 0%, $primary_color 100%) !important;
+    // Token system: --borde-normal + --sombra-media (interface-design: ONE depth strategy)
+    border: 1px solid var(--borde-normal) !important;
+    box-shadow: var(--sombra-media);
+    transition: box-shadow 0.25s ease-out, transform 0.25s ease-out;
 
     &__container {
         --bs-gutter-x: 1.5rem;
@@ -39,9 +43,11 @@
     }
 
     &-number {
+        font-family: $font-display;
         font-size: 3em;
-        font-weight: bold;
+        font-weight: 700;
         color: white;
+        letter-spacing: 0.02em;
         filter: drop-shadow(1px 1px 2px black);
         @include breakPoint($medium) {
             font-size: 3.5em;
@@ -79,12 +85,13 @@
     }
 
     &-title {
+        font-family: $font-display;
         color: white !important;
-        font-size: 1.5em;
-        line-height: normal;
-        font-weight: 700;
+        font-size: 1.4em;
+        line-height: 1.2;
+        font-weight: 600;
+        letter-spacing: 0.03em;
         margin-bottom: 0.5em;
-        font-style: italic;
         filter: drop-shadow(1px 1px 2px black);
     }
 
@@ -93,18 +100,23 @@
     }
 
     &:hover .small-desc {
-        transition: all 0.5s ease-out;
+        transition: color 0.2s ease-out;
         color: #ffffff !important;
     }
 
     &:hover &-title {
-        transition: all 0.5s ease-out;
+        transition: color 0.2s ease-out;
         color: #ffffff !important;
     }
 
     &:hover &-number {
-        transition: all 0.5s ease-out;
+        transition: color 0.2s ease-out;
         color: #ffffff !important;
+    }
+
+    &:hover {
+        box-shadow: var(--sombra-alta);
+        transform: translateY(-3px);
     }
 
     &:before {
@@ -113,7 +125,7 @@
         z-index: -1;
         top: -20px;
         right: -20px;
-        background: linear-gradient(135deg, $secondary_dark, $secondary_dark);
+        background: linear-gradient(135deg, $secondary_dark_medium, $secondary_dark);
         height: 32px;
         width: 32px;
         border-radius: 32px;
@@ -125,8 +137,8 @@
 .small-desc {
     font-size: 0.8em;
     font-weight: 400;
-    line-height: 1.5em;
-    color: white;
+    line-height: 1.6;
+    color: var(--tinta-media, rgba(255,255,255,0.8)); // secondary text level
     text-align: center;
     filter: drop-shadow(1px 1px 1px black);
     @include breakPoint($medium) {

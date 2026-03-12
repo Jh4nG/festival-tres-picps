@@ -1,15 +1,106 @@
 @use "./variables" as *;
 
+/* ============================
+   DESIGN TOKENS — Festival Tres Picos
+   Tokens named from the product's world, not generic names.
+   (interface-design skill: "token test")
+   ============================ */
+:root {
+    // Surface elevation — from sala oscura (dark) to pantalla (light)
+    // Higher surface = slightly lighter, like stepping toward the screen
+    --sala-oscura:    #{$primary_dark};           // canvas: darkest bg
+    --sala-media:     #{$primary_dark_medium};    // main section backgrounds
+    --sala-clara:     #{$primary_color};          // cards, raised surfaces
+    --sala-alta:      #{$primary_light_medium};   // floating/overlay surfaces
+
+    // Brand accents
+    --proyector:      #{$tertiary_color};         // cyan — projector light
+    --proyector-vivo: #{$tertiary_dark};          // darker cyan for text use
+    --terciopelo:     #{$secondary_dark};         // purple — velvet curtains
+    --terciopelo-vivo:#{$secondary_dark_medium};  // lighter purple
+
+    // Text hierarchy — four levels (interface-design: "text hierarchy")
+    --tinta-alta:     rgba(255, 255, 255, 1.0);   // primary text
+    --tinta-media:    rgba(255, 255, 255, 0.75);  // secondary / supporting
+    --tinta-baja:     rgba(255, 255, 255, 0.45);  // metadata / timestamps
+    --tinta-muda:     rgba(255, 255, 255, 0.25);  // disabled / placeholder
+
+    // Border hierarchy — quiet separation, not heavy lines
+    --borde-sutil:    rgba(255, 255, 255, 0.06);  // barely-there divider
+    --borde-normal:   rgba(255, 255, 255, 0.12);  // standard separation
+    --borde-enfasis:  rgba(255, 255, 255, 0.24);  // emphasized border
+    --borde-foco:     #{$tertiary_color};          // focus ring
+
+    // Elevation shadows — ONE strategy: subtle layered (interface-design: pick one)
+    --sombra-baja:    0 2px 8px rgba(0,0,0,0.18);
+    --sombra-media:   0 4px 20px rgba(0,0,0,0.28);
+    --sombra-alta:    0 8px 36px rgba(0,0,0,0.40);
+    --sombra-float:   0 16px 48px rgba(0,0,0,0.52);
+
+    // Spacing scale — 8px base grid
+    --sp-1: 4px;
+    --sp-2: 8px;
+    --sp-3: 12px;
+    --sp-4: 16px;
+    --sp-5: 24px;
+    --sp-6: 32px;
+    --sp-7: 48px;
+    --sp-8: 64px;
+
+    // Border radius — slightly rounded (technical but approachable)
+    --radio-sm:  4px;
+    --radio-md:  8px;
+    --radio-lg:  16px;
+    --radio-xl:  24px;
+    --radio-pill:9999px;
+}
+
+/* ============================
+   GLOBAL BASE
+   ============================ */
+html {
+    scroll-behavior: smooth;
+    font-size: 16px; // base size — prevents iOS auto-zoom on inputs
+}
+
 body {
+    font-family: $font-body;
+    font-size: 1rem;
+    line-height: 1.6;
     @include breakPoint($xxxxlarge) {
         display: flex;
         justify-content: center;
     }
 }
 
+/* Display / heading font throughout */
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-display;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+}
+
+/* ============================
+   TYPOGRAPHY HIERARCHY — 4 levels
+   (interface-design skill: "text hierarchy")
+   ============================ */
+.text-high   { color: var(--tinta-alta);  }    // primary — white
+.text-mid    { color: var(--tinta-media); }    // secondary — 75% white
+.text-low    { color: var(--tinta-baja);  }    // metadata — 45% white
+.text-muted  { color: var(--tinta-muda);  }    // disabled — 25% white
+
+/* Type scale — consistent, not random */
+.label-sm    { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; }
+.label-md    { font-size: 0.875rem; font-weight: 500; letter-spacing: 0.04em; }
+.body-sm     { font-size: 0.875rem; line-height: 1.6; }
+.body-md     { font-size: 1rem;     line-height: 1.7; }
+.display-sm  { font-family: $font-display; font-size: 1.5rem;  font-weight: 600; letter-spacing: 0.03em; }
+.display-md  { font-family: $font-display; font-size: 2.25rem; font-weight: 700; letter-spacing: 0.04em; }
+.display-lg  { font-family: $font-display; font-size: 3.5rem;  font-weight: 700; letter-spacing: 0.05em; }
+
 #root {
     max-width: 1920px;
-    background-color: rgba($primary_color, 0.25);
+    background: linear-gradient(180deg, rgba($primary_dark, 0.06) 0%, rgba($primary_color, 0.18) 100%);
     @include breakPoint($xxxxlarge) {
         min-width: 1920px;
     }
@@ -19,23 +110,104 @@ body {
     cursor: pointer;
 }
 
+/* ============================
+   ACCESSIBILITY — Focus rings
+   Per skill rule: focus-states (Priority 1 CRITICAL)
+   ============================ */
+:focus-visible {
+    outline: 3px solid $tertiary_color;
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+/* ============================
+   REDUCED MOTION
+   Per skill rule: reduced-motion (Priority 1 CRITICAL)
+   ============================ */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ============================
+   SIGNATURE — Tres Picos divider
+   Three geometric peaks: evokes the festival name + film perforations.
+   Applied as ::before on major section containers via .section-picos class.
+   ============================ */
+.section-picos {
+    position: relative;
+    &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 32px;
+        background: inherit;
+        clip-path: polygon(
+            // Left peak
+            0%    100%,
+            16%   100%,
+            22%   40%,
+            28%   100%,
+            // Center peak (tallest)
+            36%   100%,
+            47%   10%,
+            58%   100%,
+            // Right peak
+            66%   100%,
+            72%   40%,
+            78%   100%,
+            100%  100%,
+            100%  100%,
+            0%    100%
+        );
+        margin-bottom: -2px;
+    }
+}
+
+/* Decorador de tres picos para títulos de sección */
+.titulo-picos {
+    position: relative;
+    display: inline-block;
+
+    &::after {
+        content: "▲ ▲ ▲";
+        display: block;
+        font-size: 0.4em;
+        letter-spacing: 0.6em;
+        color: var(--proyector);
+        text-align: center;
+        margin-top: 0.3em;
+        opacity: 0.7;
+    }
+}
+
+/* ============================
+   UTILITY
+   ============================ */
 /* Back to Top */
 #backtotop {
     z-index: 999;
     display: inline-block;
     position: fixed;
     visibility: hidden;
-    bottom: 20px;
-    right: 20px;
-    width: 36px;
-    height: 36px;
-    line-height: 30px;
+    bottom: 24px;
+    right: 24px;
+    width: 42px;
+    height: 42px;
+    line-height: 36px;
     text-align: center;
-    opacity: 0.2;
+    opacity: 0;
     border-radius: 50%;
     background-clip: padding-box;
     color: #ffffff;
-    background-color: $secondary_dark;
+    background: linear-gradient(135deg, $secondary_dark_medium, $secondary_dark);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
     transition: all 0.3s ease-in-out;
 
     svg {
@@ -45,8 +217,10 @@ body {
 }
 #backtotop.visible {
     visibility: visible;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 #backtotop:hover {
     opacity: 1;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }

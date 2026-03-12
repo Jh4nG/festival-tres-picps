@@ -19,16 +19,38 @@
         }
     }
 
+    // Custom select — native <select> can't be styled (interface-design skill)
+    // We style it as much as CSS allows; pointer & border treatment
     select {
-        border-color: $secondary_dark;
+        border: 1px solid var(--borde-enfasis, #{$secondary_dark});
+        border-radius: var(--radio-md, 8px);
+        padding: 0.5rem 0.75rem;
+        background-color: rgba($primary_dark_medium, 0.85);
+        color: white;
+        font-family: $font-body;
+        font-size: 0.95rem;
+        cursor: pointer;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        appearance: none; // remove OS chrome for consistent styling
+
+        &:hover {
+            border-color: $tertiary_color;
+        }
+        &:focus {
+            outline: none;
+            border-color: $tertiary_color;
+            box-shadow: 0 0 0 3px rgba($tertiary_color, 0.25);
+        }
     }
 
     &-videos {
         padding: 1rem;
-        border-radius: 0.5rem;
+        border-radius: 0.75rem;
         transition: all 0.3s ease-out;
+        border: 1px solid rgba(255, 255, 255, 0.05);
         &:hover {
-            box-shadow: 0px 1px 15px $secondary_dark;
+            box-shadow: 0px 6px 24px rgba($secondary_dark, 0.5);
+            transform: translateY(-3px);
         }
 
         img {
@@ -133,9 +155,13 @@
 
     &__banner {
         h1 {
+            font-family: $font-display;
             color: white;
             filter: drop-shadow(1px 1px 8px black);
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
         }
-        background-color: $secondary_color;
+        background: linear-gradient(135deg, $secondary_dark 0%, $secondary_color 100%);
     }
 }

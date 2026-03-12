@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m json.tool)",
+      "Bash(cp -r \"E:/Proyectos Personales/Aleteo/festivaltrespicos/.agents/skills/ui-ux-pro-max\" \"E:/Proyectos Personales/Aleteo/festivaltrespicos/.claude/skills/\" && cp -r \"E:/Proyectos Personales/Aleteo/festivaltrespicos/.agents/skills/interface-design\" \"E:/Proyectos Personales/Aleteo/festivaltrespicos/.claude/skills/\" && echo \"Skills copiadas\")",
+      "Bash(python .claude/skills/ui-ux-pro-max/scripts/search.py \"film festival entertainment cultural event vibrant cinematic\" --design-system -p \"Festival Tres Picos\" -f markdown)",
+      "Bash(cmd //c \"dir /s /b *.py\")",
+      "Bash(npm run:*)"
+    ]
+  }
+}

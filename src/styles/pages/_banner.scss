@@ -9,9 +9,21 @@
 
         img {
             width: 100%;
+            display: block;
             @include breakPoint($xxxlarge) {
                 max-height: 700px;
             }
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 35%;
+            background: linear-gradient(to top, rgba($primary_dark, 0.55), transparent);
+            pointer-events: none;
         }
 
         @include breakPoint($medium) {
